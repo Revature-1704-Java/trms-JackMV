@@ -8,6 +8,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import oracle.jdbc.OracleDriver;
+
 public class ConnectionUtil {
 	private static Connection connection = null;
 	
@@ -15,12 +17,19 @@ public class ConnectionUtil {
 		if (connection == null) {
 			Properties prop = new Properties();
 			System.out.println(System.getProperty("user.dir"));
-			InputStream in = new FileInputStream("connection.properties");
+			try {
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			InputStream in = new FileInputStream("../webapps/TRMS/connection.properties");
 			prop.load(in);
 			
 			String url = prop.getProperty("url");
 			String user = prop.getProperty("user");
 			String pass = prop.getProperty("password");
+			
+			in.close();
 			
 			return DriverManager.getConnection(url, user, pass);
 	

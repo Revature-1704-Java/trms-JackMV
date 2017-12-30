@@ -29,25 +29,31 @@ public class EmployeeDAO {
 			ps.setString(1, employeeLogin);
 //			ps.setString(2, employeeLogin);
 			
+			System.out.println(employeeLogin);
+			System.out.println(password);
+			
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				actualPassword = rs.getString("PASSWORD");
 				firstName = rs.getString("FIRSTNAME");
 				lastName = rs.getString("LASTNAME");
 				employeeType = rs.getInt("EMPLOYEETYPEID");
-				emp = new Employee(firstName, lastName, employeeType);
-			}			
-			if (password.equals(actualPassword)) {
+				emp = new Employee(Integer.parseInt(employeeLogin), firstName, lastName, employeeType);
+			}
+			System.out.println(actualPassword);
+			if (actualPassword == null) {
+				return null;
+			} else if (password.equals(actualPassword)) {
 				return emp;
 			} else {
 				return null;
 			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
-			return emp;
+			return null;
 		} catch (IOException ex) {
 			ex.printStackTrace();
-			return emp;
+			return null;
 		}
 		
 	}

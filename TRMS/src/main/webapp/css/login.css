@@ -1,0 +1,13 @@
+body {
+  background-color:#F6F7EB;
+  color:#393E41;
+}
+
+body .highlight {
+  color: #3F88C5;
+}
+
+#login {
+  width:30%;
+  float:left;
+}

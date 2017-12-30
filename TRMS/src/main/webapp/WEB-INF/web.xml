@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>com.revature.controllers.LoginRequestServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SubmitReimbursementRequestServlet</servlet-name>
+  	<display-name>SubmitReimbursementRequestServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.controllers.SubmitReimbursementRequestServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>RequestProcessorServlet</servlet-name>
   	<url-pattern>/RequestProcessorServlet</url-pattern>
@@ -23,6 +29,10 @@
   <servlet-mapping>
   	<servlet-name>LoginRequestServlet</servlet-name>
   	<url-pattern>/LoginRequestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SubmitReimbursementRequestServlet</servlet-name>
+  	<url-pattern>/SubmitReimbursementRequestServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
   	<welcome-file>login.html</welcome-file>

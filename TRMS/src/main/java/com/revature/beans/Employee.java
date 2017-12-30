@@ -7,11 +7,21 @@ public class Employee {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", empType=" + empType + "]";
 	}
 
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	private int empId;
 	private String firstName;
 	private String lastName;
 	private int empType;
 	
-	public Employee (String firstName, String lastName, int employeeType) {
+	public Employee (int id, String firstName, String lastName, int employeeType) {
+		this.empId = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.empType = employeeType;
