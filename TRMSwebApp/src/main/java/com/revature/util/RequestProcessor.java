@@ -118,20 +118,21 @@ public class RequestProcessor {
 			e.printStackTrace();
 		}
 		ArrayList<Employee> allSubordinates = new ArrayList<Employee>();
+		allSubordinates.add(user);
 		switch (user.getEmpType()) {
 		case 1:
 			//supervisor
 			allSubordinates.addAll(empDao.getSubordinates(user.getEmpId() + ""));
-			allSubordinates.add(user);
 			break;
 		case 2:
 			//dept head
 			allSubordinates.addAll(empDao.getDepartment(user.getEmpId() + ""));
-			allSubordinates.add(user);
 			break;
 		case 3:
 			//benco
 			allSubordinates.addAll(empDao.getAll());
+			//so that the benco's reimbursements don't show up twice
+			allSubordinates.remove(0);
 			break;
 		}
 		

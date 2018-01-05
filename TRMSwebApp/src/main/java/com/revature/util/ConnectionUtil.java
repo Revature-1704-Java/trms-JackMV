@@ -8,8 +8,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import oracle.jdbc.OracleDriver;
-
 public class ConnectionUtil {
 	private static Connection connection = null;
 	
