@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>TRMS - Login</title>
+</head>
+<body>
+  <div id="title" class="container">
+    <div class="page-header">
+      <h1><span class="highlight">JackCorp</span></h1>
+      <h3>Tuition Reimbursement Management System</h3>
+    </div>
+  </div>
+  <div class="container" id="login">
+    Please enter your login information
+    <form action="LoginRequestServlet" method="post">
+      <div class="form-group">
+        <label for="employeeID">Employee ID</label>
+        <input type="text" class="form-control" id="employeeID" name="employeeID">
+      </div>
+      <div class="form-group">
+        <label for="employeePassword">Password</label>
+        <input type="password" class="form-control" id="employeePassword" name="employeePassword">
+      </div>
+      <input type="submit" value='Login' class="btn btn-primary" id="loginBtn">
+    </form>
+	</div>
+</body>
+</html>

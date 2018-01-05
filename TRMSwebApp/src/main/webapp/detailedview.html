@@ -1,0 +1,54 @@
+<div class='container'>
+  <button type="button" class='btn btn-primary' id="backButton">Back</button>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th scope='col'>Request Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Employee ID: {{ employeeId }}</td>
+      </tr>
+      <tr>
+        <td>Event Type: {{ eventType }}<td>
+      </tr>
+      <tr>
+        <td>Description: {{ description }}<td>
+      </tr>
+      <tr>
+        <td>Location: {{ location }}<td>
+      </tr>
+      <tr>
+        <td>Justification: {{ justification }}<td>
+      </tr>
+      <tr>
+        <td>Start Date: {{ startDate }}<td>
+      </tr>
+      <tr>
+        <td>Grading Format: {{ gradingFormat }}<td>
+      </tr>
+      <tr>
+        <td>Event Cost: {{ eventCost }}<td>
+      </tr>
+      <tr>
+        <td>Reimbursement Amount: {{ amountReimbursed }}<td>
+      </tr>
+      <tr>
+        <td>Submission Last Updated: {{ submissionDate }}</td>
+      </tr>
+      <tr>
+        <td>Work Time Missed: {{ timeMissed }}</td>
+      </tr>
+      <tr>
+        <td>Approval Status: {{ approvalStatus }}</td>
+      </tr>
+      <tr>
+        <td>Deets: {{ additionalDetails }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <textarea class='form-control' name='approveRejectReason' id='approveRejectReason' hint='Please enter any additional details if approving and a reason if rejecting.'></textarea>
+  <button type='button' id='approve' class='btn btn-success'>Approve Request</button>
+  <button type='button' id='reject' class='btn btn-danger'>Deny Request</button>
+</div>
